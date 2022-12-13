@@ -2,6 +2,20 @@
 
 using namespace std;
 
+int adiff(int A,int B){
+	int dif;
+	A =A%360;
+	B =B%360;
+	if (A > B){
+		dif = A-B;
+	}else{
+		dif = B-A;
+	}
+	if (dif >180){
+		dif = 360-dif;
+	}
+	return dif ;
+}
 
 int main(){
   cout << adiff(180,270);
